@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: arial;
 }
-article {
+#page {
   display: grid;
   grid-template-rows: 100vh;
   grid-template-columns: 20% 1fr;
@@ -32,6 +32,9 @@ li {
 }
 header {
   font-size: 2em;
+}
+h2 {
+  font-size: 30px;
 }
 #linkUnderline {
   text-decoration: underline;
@@ -127,7 +130,7 @@ h3 {
 /* End code snippet CSS */
 
 @media (max-width: 860px) {
-  article {
+  #page {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 260px calc(80vh-260px);
