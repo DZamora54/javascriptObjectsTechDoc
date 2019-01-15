@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: arial;
+}
+article {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 20% 1fr;
+  grid-template-areas: "navbar content";
+}
+#content {
+  grid-area: content;
+  overflow: auto;
+}
+.main-section {
+  width: 90%;
+  margin: 30px auto 30px auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid lightgray;
+}
+.highlightSelected {
+  background-color: #e0e2e6;
+  color: darkred;
+}
+.highlight {
+  background: rgba(255, 255, 173, 0.87);
+  border-left: 5px solid rgb(209, 206, 13);
+  padding: 15px;
+}
+li {
+  list-style-type: none;
+}
+header {
+  font-size: 2em;
+}
+#linkUnderline {
+  text-decoration: underline;
+}
+#reference {
+  border-bottom: 0px;
+}
+
+/* Start nav CSS */
+#navbar {
+  grid-area: navbar;
+  background-color: #e0e2e6;
+}
+#navLinks,
+.nav-link {
+  display: block;
+}
+#navHeader {
+  margin: 10px;
+}
+a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 10px 10px 10px;
+}
+a:hover {
+  background: rgb(33, 233, 33);
+  color: white;
+}
+#navLinks {
+  overflow: auto;
+}
+/* End nav CSS */
+
+/* Start table CSS */
+table,
+th,
+td {
+  text-align: left;
+  padding: 15px;
+  border-collapse: collapse;
+}
+table {
+  border: 1px solid gray;
+}
+th {
+  border-bottom: 1px solid gray;
+}
+img {
+  width: 50%;
+}
+#objectTable {
+  border: 1px solid gray;
+}
+.grayTableRow {
+  background: #e0e2e6;
+}
+#objCol {
+  width: 50%;
+  text-align: center;
+}
+/* End of table CSS */
+
+/* Start code snippet CSS */
+.snippet {
+  background: #e0e2e6;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+code {
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+  background: white;
+  border-left: 2px solid rgb(33, 233, 33);
+}
+h3 {
+  margin: 0 0 10px 0;
+}
+.blueText {
+  color: blue;
+}
+.darkRedText {
+  color: darkred;
+}
+.redText {
+  color: red;
+}
+.greenText {
+  color: green;
+}
+/* End code snippet CSS */
+
+@media (max-width: 860px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 260px calc(80vh-260px);
+  }
+  #navbar {
+    grid-area: navbar;
+    height: 260px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-rows: 60px 200px;
+    grid-template-areas: "navHeader" "navLinks";
+    border-bottom: 1px solid gray;
+  }
+  #content {
+    margin-top: 260px;
+    grid-area: content;
+    width: 100%;
+  }
+  .nav-link {
+    overflow: auto;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+  }
+  #navHeader {
+    text-align: center;
+    grid-area: navHeader;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding-top: 10px;
+  }
+  #navLinks {
+    overflow: auto;
+    overflow-y: auto;
+    grid-area: navLinks;
+  }
+}
